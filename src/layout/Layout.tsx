@@ -17,7 +17,7 @@ const Layout = ({ children }: RouteConfig): ReactElement => {
       <Header style={{backgroundColor: 'white'}}>
         <Head /></Header>
       <Content style={{height: '80vh',  display: 'flex', justifyContent: 'center'}}> {children}</Content>
-      <Footer style={{backgroundColor: 'grey'}}><Foot/></Footer>
+      <Footer style={{backgroundColor: 'white'}}><Foot/></Footer>
     </LayoutType>
   );
 };
