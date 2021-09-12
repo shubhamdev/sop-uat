@@ -5,7 +5,7 @@ import { Layout  as LayoutType} from 'antd';
 import { ReactElement } from 'react';
 
 
-
+const Cont=React.lazy(()=>import('./content/Content'))
 const Head = React.lazy(() => import('./header/Header'))
 const Foot = React.lazy(() => import('./footer/Footer'))
 
@@ -16,8 +16,8 @@ const Layout = ({ children }: RouteConfig): ReactElement => {
     <LayoutType>
       <Header style={{backgroundColor: 'white'}}>
         <Head /></Header>
-      <Content style={{height: '80vh',  display: 'flex', justifyContent: 'center'}}> {children}</Content>
-      <Footer style={{backgroundColor: 'white'}}><Foot/></Footer>
+      <Content style={{height: '70vh',  display: 'flex', justifyContent: 'center'}}> <Cont/></Content>
+      <Footer style={{backgroundColor: 'white' }}><Foot/></Footer>
     </LayoutType>
   );
 };
