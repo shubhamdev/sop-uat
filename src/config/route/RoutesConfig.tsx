@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import { RouteType } from 'src/shared/models/routeModels';
-
+debugger;
 const RoutesConfig: RouteType = {
   publicRoutes: [
     {
@@ -36,3 +36,4 @@ const RoutesConfig: RouteType = {
   ],
 };
 export default RoutesConfig;
+ 

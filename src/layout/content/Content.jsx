@@ -8,7 +8,7 @@ import { ReactComponent as Logo2 } from "../../assets/male-doc.svg";
 import { ReactComponent as Logo4 } from "../../assets/lab-test.svg";
 import { ReactComponent as Logo3 } from "../../assets/medicine.svg";
 import { Link } from "react-router-dom";
-import Popup  from "./Popup";
+import Popup from "./Popup";
 
 const Content = () => {
   var Did = "d2beabbb-d891-4a86-8297-26b006d0861f";
@@ -24,7 +24,6 @@ const Content = () => {
   const [medicineCityName, setcityNameForMedicine] = useState([]);
 
   const getData = (dataOfCity) => {
-    debugger;
     setCityData(dataOfCity);
     setcityName(dataOfCity[Did]);
     // setcityName(dataOfCity[Did]);
@@ -40,32 +39,27 @@ const Content = () => {
     <div>
       {/* <div style={{alignItems:"flex-end",height :"25px" ,width:"25px"  }}> */}
 
-      <Link>
+      <Link to="/">
         <Logo2
           // onClick={()=>{drList()}}
           className="logo2"
           style={{ height: "40px", marginTop: "165px", marginLeft: "95px" }}
         />
       </Link>
-      <Link>
+      <Link to="/">
         <Logo3
           onClick={() => changeCitydata("1d70a7da-654c-4396-a411-f098c0f3f376")}
           className="logo3"
           style={{ height: "40px", marginTop: "165px", marginLeft: "100px" }}
         />
       </Link>
-      <Link>
+      <Link to="/">
         <Logo4
-        
-        onClick={() => changeCitydata("e80cd81a-74d8-4ceb-bd37-e057dc4a4af7")}
+          onClick={() => changeCitydata("e80cd81a-74d8-4ceb-bd37-e057dc4a4af7")}
           className="logo4"
           style={{ height: "40px", marginTop: "165px", marginLeft: "105px" }}
         />
       </Link>
-      {/* <Link><Logo4 /></Link>/ */}
-      {/* <Link ><Logo3/></Link> */}
-
-      {/* </div> */}
 
       <div style={{ justifyContent: "center", marginTop: "20px" }}>
         <Input.Group compact>
@@ -77,20 +71,7 @@ const Content = () => {
             <Logo1 style={{ display: "flex" }}></Logo1>
           </Button>
           <Popup doctorCityName={doctorCityName} visible1={visible} />
-          {/* <Modal
-            title="Modal 1000px width"
-            centered
-            visible={visible}
-            onOk={() => setVisible(false)}
-            onCancel={() => setVisible(false)}
-            footer={null}
-            width={1000}
-          >
-            {doctorCityName?.length}
-            {doctorCityName.map((x) => (
-              <p>{x}</p>
-            ))}
-          </Modal> */}
+          
           <AutoComplete
             style={{ width: "350px" }}
             placeholder="Cities"

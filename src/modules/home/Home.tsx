@@ -1,7 +1,8 @@
+import Layout from 'src/layout/Layout';
 const HomeComponent = () => {
   return (
     <>
-      test
+      <Layout></Layout>
     </>
   );
 };
