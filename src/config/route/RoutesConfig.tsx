@@ -1,44 +1,45 @@
-import { lazy } from 'react';
-import { RouteType } from 'src/shared/models/routeModels';
+import { lazy } from "react";
+import { RouteType } from "src/shared/models/routeModels";
 debugger;
 const RoutesConfig: RouteType = {
   publicRoutes: [
     {
-      path: '/login',
+      path: "/login",
       isPublic: true,
-      component: lazy((): any => import('src/modules/login/Login')),
+      component: lazy((): any => import("src/modules/login/Login")),
     },
     {
-      path: '/signup',
+      path: "/signup",
       isPublic: true,
-      component: lazy((): any => import('src/modules/signup/Signup')),
+      component: lazy((): any => import("src/modules/signup/Signup")),
     },
     {
-      path: '/',
+      path: "/",
       isPublic: true,
-      component: lazy((): any => import('src/modules/home/Home')),
+      component: lazy((): any => import("src/modules/home/Home")),
     },
   ],
   privateRoutes: [
     {
-      path: '/',
+      path: "/",
       isPublic: false,
       isExact: true,
       subRoutes: [
         {
-          path: 'path_name_who_show_in_URL',
+          path: "path_name_who_show_in_URL",
           isPublic: false,
           isExact: false,
           // component: lazy((): any => import('component path')),
         },
         {
-          path: '*',
+          path: "*",
           isPublic: false,
-          component: lazy((): any => import('src/shared/components/NotFoundComponent')),
+          component: lazy(
+            (): any => import("src/shared/components/NotFoundComponent")
+          ),
         },
       ],
     },
   ],
 };
 export default RoutesConfig;
- 

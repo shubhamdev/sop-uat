@@ -1,6 +1,5 @@
 import { Form, Input, Button } from "antd";
 const Login = () => {
-  debugger;
   const onFinish = (values: any) => {
     console.log("Success:", values);
   };

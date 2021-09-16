@@ -1,12 +1,8 @@
 import "./App.css";
-import RouteLoader from './config/route/RouteLoader';
+import RouteLoader from "./config/route/RouteLoader";
 
 const App = () => {
-  return(
-  
-     <RouteLoader />
-  
-  )
-}
+  return <RouteLoader />;
+};
 
 export default App;

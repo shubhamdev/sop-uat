@@ -31,7 +31,6 @@ const Content = () => {
     // setcityNameForMedicine(dataOfCity[Mid]);
   };
   const changeCitydata = (id) => {
-    debugger;
     setcityName(cityData[id]);
   };
 
@@ -71,7 +70,7 @@ const Content = () => {
             <Logo1 style={{ display: "flex" }}></Logo1>
           </Button>
           <Popup doctorCityName={doctorCityName} visible1={visible} />
-          
+
           <AutoComplete
             style={{ width: "350px" }}
             placeholder="Cities"
