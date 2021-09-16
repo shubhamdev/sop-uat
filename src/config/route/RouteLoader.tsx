@@ -1,11 +1,11 @@
-import React, { ReactElement, Suspense } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import PublicRoutes from './PublicRoutes';
-import Spinner from 'src/shared/components/Spinner';
-import Layout from 'src/layout/Layout';
+import React, { ReactElement, Suspense } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import PublicRoutes from "./PublicRoutes";
+import Spinner from "src/shared/components/Spinner";
+// import Layout from 'src/layout/Layout';
 
 const RouteLoader = (): ReactElement | null => {
-
+  debugger;
   return (
     <React.Fragment>
       <Router basename="/">
@@ -17,10 +17,11 @@ const RouteLoader = (): ReactElement | null => {
            :
            <PublicRoutes />
           } */}
-          
-          <Layout>
+
+          {/*           
+          <Layout> */}
           <PublicRoutes />
-          </Layout>
+          {/* </Layout> */}
         </Suspense>
       </Router>
     </React.Fragment>
