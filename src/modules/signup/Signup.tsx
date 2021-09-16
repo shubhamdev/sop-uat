@@ -55,8 +55,8 @@ const Signup = () => {
                 position: "relative",
                 float: "right",
                 width: "100px",
-                marginRight:"110px"
-            }}
+                marginRight: "110px",
+              }}
             >
               SignUp
             </Button>
@@ -99,12 +99,11 @@ const Signup = () => {
             label="Gender"
             rules={[{ required: true }, { type: "string", min: 6 }]}
           >
-            <Select  placeholder="Select Your Gender">
+            <Select placeholder="Select Your Gender">
               <Option value="Male">Male</Option>
               <Option value="Female">Female</Option>
               <Option value="others">Others</Option>
             </Select>
-        
           </Form.Item>
 
           <Form.Item

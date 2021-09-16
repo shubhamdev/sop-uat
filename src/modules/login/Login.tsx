@@ -1,4 +1,4 @@
-import { Form, Input, Button} from "antd";
+import { Form, Input, Button } from "antd";
 const Login = () => {
   debugger;
   const onFinish = (values: any) => {
@@ -10,11 +10,16 @@ const Login = () => {
   };
   return (
     <div>
-      
-      
       <Form
-      style={{ boxSizing:"border-box",boxShadow:"5px",height:"100px",width:"500px",marginTop:"200px",marginLeft:"450px"}}
-name="basic"
+        style={{
+          boxSizing: "border-box",
+          boxShadow: "5px",
+          height: "100px",
+          width: "500px",
+          marginTop: "200px",
+          marginLeft: "450px",
+        }}
+        name="basic"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
         initialValues={{ remember: true }}
@@ -22,17 +27,45 @@ name="basic"
         onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
-        <Form.Item style={{marginLeft:"100px"}}>
-         <Button  href="/login" style={{backgroundColor:"white",position:"relative",float:"left",width:"100px",marginLeft:"66px"}}>LOGIN</Button>
-      <Button href="/signup" style={{backgroundColor:"white",position:"relative",float:"right",width:"100px"}}>SignUp</Button></Form.Item>
+        <Form.Item style={{ marginLeft: "100px" }}>
+          <Button
+            href="/login"
+            style={{
+              backgroundColor: "white",
+              position: "relative",
+              float: "left",
+              width: "100px",
+              marginLeft: "66px",
+            }}
+          >
+            LOGIN
+          </Button>
+          <Button
+            href="/signup"
+            style={{
+              backgroundColor: "white",
+              position: "relative",
+              float: "right",
+              width: "100px",
+            }}
+          >
+            SignUp
+          </Button>
+        </Form.Item>
         <Form.Item
           label="Phone Number"
           name="Phone Number"
-          rules={[{ required: true, message: "Please input your Phone Number!" }]}
+          rules={[
+            { required: true, message: "Please input your Phone Number!" },
+          ]}
         >
-        
-          <Input style ={{position:"relative",float:'left',width:250}} placeholder="Phone Number" />
-          <Button style={{position:"relative",float:'right',width:80}}>Send Otp</Button>
+          <Input
+            style={{ position: "relative", float: "left", width: 250 }}
+            placeholder="Phone Number"
+          />
+          <Button style={{ position: "relative", float: "right", width: 80 }}>
+            Send Otp
+          </Button>
         </Form.Item>
         <Form.Item
           label="OTP"
@@ -41,7 +74,7 @@ name="basic"
         >
           <Input.Password />
         </Form.Item>
-       
+
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit">
             Login
