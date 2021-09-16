@@ -9,6 +9,11 @@ const RoutesConfig: RouteType = {
       component: lazy((): any => import('src/modules/login/Login')),
     },
     {
+      path: '/signup',
+      isPublic: true,
+      component: lazy((): any => import('src/modules/signup/Signup')),
+    },
+    {
       path: '/',
       isPublic: true,
       component: lazy((): any => import('src/modules/home/Home')),
